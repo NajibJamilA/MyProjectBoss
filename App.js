@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View ,Image} from 'react-native';
+import Judul from './Components/Judul';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,11 +22,13 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Setelah Berjuang Lama Akhirnya</Text>
+        <Judul coy="BIODATA"/>
+        <Judul coy="Login"/>
+        <Judul coy="SignUp"/>
         <Text style={styles.android}>Nama : Najib Jamil Abdurrahman</Text>
         <Text style={styles.android}>Kelas : XI RPL 1</Text>
         <Text style={styles.android}>No.Abs : 25</Text>
-        <Image source={require('E:/reactnative/horai25/najib.jpg')}></Image>
+        <Image source={require('E:/reactnative/horai25/najib.jpg')} style={{width: 400, height: 400}} />
       </View>
     );
   }
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
   },
   welcome: {
     fontSize: 25,
