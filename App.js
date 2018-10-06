@@ -1,3 +1,11 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View ,Image} from 'react-native';
 import Judul from './Components/Judul';
@@ -14,13 +22,10 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Judul coy="BIODATA"/>
-        <Judul coy="Login"/>
-        <Judul coy="SignUp"/>
         <Text style={styles.android}>Nama : Najib Jamil Abdurrahman</Text>
         <Text style={styles.android}>Kelas : XI RPL 1</Text>
         <Text style={styles.android}>No.Abs : 25</Text>
-        <Image source={require('E:/reactnative/horai25/najib.jpg')} style={{width: 400, height: 400}} />
+        <Image source={require('E:/reactnative/horai25/najib.jpg')} style={{width: 200, height: 200}}/>
       </View>
     );
   }
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#d900aa',
   },
   welcome: {
     fontSize: 25,
