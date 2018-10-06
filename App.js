@@ -7,45 +7,83 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View ,Image} from 'react-native';
-import Judul from './Components/Judul';
+import {Text, View ,Image} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.android}>Nama : Najib Jamil Abdurrahman</Text>
-        <Text style={styles.android}>Kelas : XI RPL 1</Text>
-        <Text style={styles.android}>No.Abs : 25</Text>
-        <Image source={require('E:/reactnative/horai25/najib.jpg')} style={{width: 200, height: 200}}/>
+export default App = (props) => (
+      <View style={forstyle.back}>
+      <View style={forstyle.background}>
+      <View>
+        <Image style={forstyle.photo} source={require('E:/reactnative/horai25/najib.jpg')}/>
       </View>
-    );
-  }
-}
+      <View style={forstyle.description}>
+        <Text style={forstyle.name}>Nama : Najib Jamil Abdurrahman</Text>
+        <Text style={forstyle.subs}>Kelas : XI RPL 1</Text>
+        <Text style={forstyle.subs}>No : 25</Text>
+      </View>
+      </View>
+      <View style={forstyle.footer}>
+        <Text style={forstyle.school}>SMK TELKOM PWT</Text>
+        <Text style={forstyle.akhir}>By The Way</Text>
+        </View>
+      </View>
+)
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 2,
+const forstyle= {
+  back: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#d900aa',
+    backgroundColor: '#3A89C9',
   },
-  welcome: {
-    fontSize: 25,
-    color: 'black',
+
+  background: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#40A1F2',
+    width: 300,
+    height: 400,
+    padding: 0,
+    borderRadius: 10,
+    marginBottom: 0
   },
-  android: {
-    fontSize: 18,
-    textAlign: 'center',
-    color: 'black',
-    margin: 5,
+
+  photo: {
+    width: 100,
+    height: 100,
+    marginTop: 20
   },
-});
+
+  description:{
+    margin: 50,
+    marginTop: 35,
+    marginLeft: 5,
+    marginRight: 5
+  },
+
+  name:{
+    fontSize: 20,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    color: '#f2f2f2'
+  },
+
+  subs:{
+    color: '#f2f2f2',
+    fontSize: 15,
+  },
+
+  footer:{
+    marginTop: 80,
+    alignItems: 'center'
+  },
+
+  school:{
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: "black"
+  },
+
+  akhir:{
+    color: 'black'
+  }
+};
